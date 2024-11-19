@@ -53,11 +53,22 @@ public class Empregado {
     }
 
     public double calcularIRPF() {
-        if (salario < 1800) {
-            return 0.1 * salario;
+        double salario_descontado = salario - calcularINSS();
+
+        if (salario_descontado < 2259.21) {
+            return 0;
+        }
+        else if (salario_descontado >= 2259.21 || salario_descontado < 2826.66) {
+            return (salario_descontado * 0.075) - 158.40;
+        }
+        else if (salario_descontado >= 2826.66 || salario_descontado < 3751.06) {
+            return (salario_descontado * 0.15) - 381.44;
+        }
+        else if (salario_descontado >= 3751.06 || salario_descontado < 4664.69) {
+            return (salario_descontado * 0.225) - 662.77;
         }
         else {
-            return 0.27 * salario;
+            return (salario_descontado * 0.275) - 896.00;
         }
     }
 }
