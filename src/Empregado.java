@@ -71,4 +71,12 @@ public class Empregado {
             return (salario_descontado * 0.275) - 896.00;
         }
     }
+
+
+
+    public void imprimirInfo() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Endereço: " + endereco);
+        System.out.println("Salário: " + salario);
+    }
 }
