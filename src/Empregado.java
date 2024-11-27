@@ -77,6 +77,9 @@ public class Empregado {
     public void imprimirInfo() {
         System.out.println("Nome: " + nome);
         System.out.println("Endereço: " + endereco);
-        System.out.println("Salário: " + salario);
+        System.out.println("Salário bruto: " + salario);
+        System.out.println("INSS: " + calcularINSS());
+        System.out.println("IRPF: " + calcularIRPF());
+        System.out.println("Salário líquido: " + (salario - calcularINSS() - calcularIRPF()));
     }
 }
