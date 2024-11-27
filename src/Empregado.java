@@ -38,13 +38,13 @@ public class Empregado {
         if (salario < 1412.01) {
             return salario * 0.075;
         }
-        else if (salario >= 1412.01 || salario < 2666.69) {
+        else if (salario >= 1412.01 && salario < 2666.69) {
             return salario * 0.09;
         }
-        else if (salario >= 2666.69 || salario < 4000.04) {
+        else if (salario >= 2666.69 && salario < 4000.04) {
             return salario * 0.12;
         }
-        else if (salario >= 4000.04 || salario < 7786.03) {
+        else if (salario >= 4000.04 && salario < 7786.03) {
             return salario * 0.14;
         }
         else {
@@ -58,13 +58,13 @@ public class Empregado {
         if (salario_descontado < 2259.21) {
             return 0;
         }
-        else if (salario_descontado >= 2259.21 || salario_descontado < 2826.66) {
+        else if (salario_descontado >= 2259.21 && salario_descontado < 2826.66) {
             return (salario_descontado * 0.075) - 158.40;
         }
-        else if (salario_descontado >= 2826.66 || salario_descontado < 3751.06) {
+        else if (salario_descontado >= 2826.66 && salario_descontado < 3751.06) {
             return (salario_descontado * 0.15) - 381.44;
         }
-        else if (salario_descontado >= 3751.06 || salario_descontado < 4664.69) {
+        else if (salario_descontado >= 3751.06 && salario_descontado < 4664.69) {
             return (salario_descontado * 0.225) - 662.77;
         }
         else {
